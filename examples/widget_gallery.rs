@@ -9,10 +9,11 @@ fn main() {
     Application::new(|cx| {
         //cx.add_stylesheet("examples/test_style.css").unwrap();
 
-        //buttons(cx)
-        //    .space(Pixels(30.0));
-        checkbox(cx).space(Pixels(30.0));
-        // label(cx);
+        ScrollView::new(cx, 0., 0., false, true, |cx| {
+            buttons(cx).space(Pixels(30.0));
+            checkbox(cx).space(Pixels(30.0));
+            label(cx).space(Pixels(30.0));
+        });
     })
     .title("Widget Gallery")
     //.background_color(Color::rgb(249, 249, 249))
@@ -102,7 +103,7 @@ pub fn checkbox(cx: &mut Context) -> Handle<impl View> {
     .row_between(Pixels(15.0))
 }
 
-pub fn label(cx: &mut Context) {
+pub fn label(cx: &mut Context) -> Handle<impl View> {
     VStack::new(cx, |cx| {
         Label::new(cx, "A simple label").font_size(20.0).font("roboto-bold");
 
@@ -112,5 +113,5 @@ pub fn label(cx: &mut Context) {
 
         Label::new(cx, "This is some simple text");
     })
-    .row_between(Pixels(15.0));
+    .row_between(Pixels(15.0))
 }

@@ -304,15 +304,35 @@ slider .thumb {
 }
 
 scrollbar {
-    background-color: #9e9e9e;
-    border-radius: 7px;
-    child-space: 2px;
+    border-radius: 2px;
+    child-space: 4px;
+    min-width:10px;
+    min-height:10px;
+}
+
+scrollbar:over{
+    background-color: #e2e2e2;
+    child-space: 3px;
+    border-radius: 5px;
+}
+
+scrollbar:active{
+    background-color: #e2e2e2;
+    child-space: 3px;
+    border-radius: 5px;
 }
 
 scrollbar>.thumb {
-    border-radius: 6px;
-    min-width: 12px;
-    min-height: 12px;
+    background-color: #737373;
+}
+
+scrollbar:over>.thumb{
+    border-radius: 2px;
+}
+
+scrollbar:active>.thumb{
+    background-color: #636363;
+    border-radius: 2px;
 }
 
 list {

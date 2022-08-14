@@ -41,7 +41,7 @@ fn main() {
             },
         )
         .width(Units::Pixels(600.0))
-        .height(Units::Pixels(14.0));
+        .height(Units::Pixels(10.0));
     })
     .title("Scrollview")
     .inner_size((600, 614))
